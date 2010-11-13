@@ -1,7 +1,48 @@
 <html>
-<head>
-<title>Jeanba88 Serveur </title>
-</head>
-<body>
-<IFRAME src="http://jeanba88.com/mobile/mobile.php" width=320 height=480 scrolling=off frameborder=0 > </IFRAME>
+ <head>
+ <META HTTP-EQUIV=Refresh CONTENT="1; URL=http://95.142.168.219/~jeanba88/1/mobile1.php"> 
+ </head>
+ <body>
+ <div id="waitDiv" style="position:absolute; left:100; top:100; visibility:hidden; text-align: center ; backgroud-color : #FFFFFF ">
+	<table cellpadding="6" cellspacing="0">
+		<tr>
+			<td align="center">
+			Chargement en cours<br />
+			<img src="img/load.gif" alt="Patientez" />
+			<br />Veuillez patientez
+			</td>
+		<tr>
+	</table>
+</div>
+				
+
+
+<script type="text/javascript">
+	var DHTML = (document.getElementById || document.all || document.layers);
+	function ap_getObj(name){
+		if (document.getElementById){
+			return document.getElementById(name).style;
+		}
+		else if (document.all){
+			return document.all[name].style;
+		}
+		else if (document.layers){
+			return document.layers[name];
+		}
+	}
+				 
+	function ap_showWaitMessage(div, flag){
+		if (!DHTML) return;
+		var x = ap_getObj(div);
+		x.visibility = (flag) ? 'visible':'hidden'
+		if(! document.getElementById)
+			if(document.layers)
+				x.left=280/2;
+			return true;
+	}
+				 
+	ap_showWaitMessage('waitDiv', 1);
+</script>
+
 </body>
+</html>
